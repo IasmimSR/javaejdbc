@@ -66,7 +66,7 @@ public class ContaService {
 
     private Conta buscarContaPorNumero(Integer numeroDaConta) {
         Connection conn = connection.recuperarConexao();
-        Conta conta = (Conta) new ContaDAO(conn).listar();
+        Conta conta = (Conta) new ContaDAO(conn).listarPorNumero(numeroDaConta);
         if(conta != null) {
             return conta;
         } else {
